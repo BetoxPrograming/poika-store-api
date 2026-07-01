@@ -1,6 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 
+import { databaseRouter } from './routes/database.routes.js'
 import { healthRouter } from './routes/health.routes.js'
 
 export const app = express()
@@ -15,3 +16,4 @@ app.get('/', (_req, res) => {
 })
 
 app.use('/api/health', healthRouter)
+app.use('/api/database', databaseRouter)
