@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsx watch src/server.ts",
     "build": "tsc",
-    "start": "node dist/server.js"
+    "start": "node dist/server.js",
+    "db:migrate": "tsx src/database/run-sql-file.ts database/migrations/001_create_categories_table.sql",
+    "db:seed": "tsx src/database/run-sql-file.ts database/seeds/001_seed_categories.sql"
   },
   "repository": {
     "type": "git",
